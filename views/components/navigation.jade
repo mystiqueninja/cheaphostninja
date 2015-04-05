@@ -1,5 +1,5 @@
 nav.navbar.navbar-default(role="navigation")
-  .container
+  .container-fluid
     .navbar-header
       button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-megadropdown-tabs")
         span.sr-only Toggle navigation
@@ -8,7 +8,7 @@ nav.navbar.navbar-default(role="navigation")
         span.icon-bar
       a.navbar-brand(href="/") #{title}
     .collapse.navbar-collapse#bs-megadropdown-tabs
-      ul.nav.navbar-nav.navbar-right
+      ul.nav.navbar-nav.navbar-left
         li.active
           a(href="/") Home
         li(class="dropdown mega-dropdown")
@@ -20,15 +20,37 @@ nav.navbar.navbar-default(role="navigation")
                 .tab-pane.active#vps
                   ul.nav-list.list-inline
                     li
-                      a(href="/products/vps/mini") VPS mini
+                      a(href="/products/vps/mini")
+                        img(src="http://ispace.co.za/wp-content/uploads/2013/09/vps-hosting.png")
+                        span VPS mini
+                    li
+                      a(href="/products/vps/mini")
+                        img(src="http://ispace.co.za/wp-content/uploads/2013/09/vps-hosting.png")
+                        span VPS mini
+                    li
+                      a(href="/products/vps/mini")
+                        img(src="http://ispace.co.za/wp-content/uploads/2013/09/vps-hosting.png")
+                        span VPS mini
                 .tab-pane#dedicated
                   ul.nav-list.list-inline
                     li
-                      a(href="/products/vps/mini") Tiny Dedicated
+                      a(href="/products/vps/mini") 
+                        img(src="http://www.websiteresolved.com/images/products/high-end-dedicated-server.png")
+                        span Tiny Dedicated
+                    li
+                      a(href="/products/vps/mini") 
+                        img(src="http://www.websiteresolved.com/images/products/high-end-dedicated-server.png")
+                        span Tiny Dedicated
+                    li
+                      a(href="/products/vps/mini") 
+                        img(src="http://www.websiteresolved.com/images/products/high-end-dedicated-server.png")
+                        span Tiny Dedicated
                 .tab-pane#shared
                   ul.nav-list.list-inline
                     li
-                      a(href="/products/vps/mini") Micro shared hosting
+                      a(href="/products/vps/mini") 
+                        img(src="https://fluxbits.com/images/hosting.png")
+                        span Micro shared hosting
             ul.nav.nav-tabs(role="tablist")
               li.active
                 a(href="#vps", role="tab", data-toggle="tab") VPS Hosing
@@ -65,3 +87,13 @@ nav.navbar.navbar-default(role="navigation")
             a(href="/about") About
           li
             a(href="/contact") Contact Us 
+      form#signin.navbar-form.navbar-right(role="form")
+        .input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-user
+          input(id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address")
+        .input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-lock
+          input(id="password" type="password" class="form-control" name="password" value="" placeholder="Password")
+        button(type="submit" class="btn btn-primary") Login
