@@ -1,3 +1,14 @@
+.navbar-form .form-control {
+  border-radius: 0;
+  border: none;
+}
+.navbar-form .input-group-addon {
+  border-radius: 0;
+}
+.navbar-form .btn {
+  border-radius: 0;
+  line-height: 1.6;
+}
 header.max-size {
   display: table;
   width: 100%;

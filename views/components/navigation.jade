@@ -87,7 +87,7 @@ nav.navbar.navbar-default(role="navigation")
             a(href="/about") About
           li
             a(href="/contact") Contact Us 
-      form#signin.navbar-form.navbar-right(role="form")
+      form#signin.navbar-form.navbar-right(role="form", action="/users/login")
         .input-group
           span.input-group-addon
             i.glyphicon.glyphicon-user
@@ -97,3 +97,4 @@ nav.navbar.navbar-default(role="navigation")
             i.glyphicon.glyphicon-lock
           input(id="password" type="password" class="form-control" name="password" value="" placeholder="Password")
         button(type="submit" class="btn btn-primary") Login
+        a.btn.btn-success(href="/register") Register
