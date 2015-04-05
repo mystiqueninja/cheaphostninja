@@ -1,0 +1,67 @@
+nav.navbar.navbar-default(role="navigation")
+  .container
+    .navbar-header
+      button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-megadropdown-tabs")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/") #{title}
+    .collapse.navbar-collapse#bs-megadropdown-tabs
+      ul.nav.navbar-nav.navbar-right
+        li.active
+          a(href="/") Home
+        li(class="dropdown mega-dropdown")
+          a(href="#", class="dropdown-toggle", data-toggle="dropdown") Products
+            span.caret
+          .dropdown-menu.mega-dropdown-menu
+            .container-fluid
+              .tab-content
+                .tab-pane.active#vps
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") VPS mini
+                .tab-pane#dedicated
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") Tiny Dedicated
+                .tab-pane#shared
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") Micro shared hosting
+            ul.nav.nav-tabs(role="tablist")
+              li.active
+                a(href="#vps", role="tab", data-toggle="tab") VPS Hosing
+              li
+                a(href="#dedicated", role="tab", data-toggle="tab") Dedicated Hosting
+              li
+                a(href="#shared", role="tab", data-toggle="tab") Shared Hosting
+        li(class="dropdown mega-dropdown")
+          a(href="#", class="dropdown-toggle", data-toggle="dropdown") Services
+            span.caret
+          .dropdown-menu.mega-dropdown-menu
+            .container-fluid
+              .tab-content
+                .tab-pane.active#vps
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") Web design
+                .tab-pane#dedicated
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") Server monitoring
+                .tab-pane#shared
+                  ul.nav-list.list-inline
+                    li
+                      a(href="/products/vps/mini") Server setup
+            ul.nav.nav-tabs(role="tablist")
+              li.active
+                a(href="#vps", role="tab", data-toggle="tab") Web design
+              li
+                a(href="#dedicated", role="tab", data-toggle="tab") Server monitoring
+              li
+                a(href="#shared", role="tab", data-toggle="tab") Server setup
+          li
+            a(href="/about") About
+          li
+            a(href="/contact") Contact Us 
