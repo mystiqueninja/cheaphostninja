@@ -1,4 +1,5 @@
 jQuery(function ($) {
+  initNavbar($);
   var header = $('header.max-size');
   var nav = $('.navbar-default');
   var bod = $('body');
@@ -39,3 +40,15 @@ jQuery(function ($) {
     }
   );
 });
+
+function initNavbar($) {
+  var path = window.location.pathname;
+  path = path.replace(/\/$/, "");
+  path = decodeURIComponent(path);
+  if (path === '') path = '/';
+  $("ul.nav.navbar-nav > li > a").each(function () {
+    if (path == $(this).attr('href')) {
+      $(this).closest('li').addClass('active');
+    }
+  });
+}

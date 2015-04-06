@@ -1,0 +1,47 @@
+nav.navbar.navbar-default(role="navigation")
+  .container-fluid
+    .navbar-header
+      button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-megadropdown-tabs")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/") #{title}
+    .collapse.navbar-collapse#bs-megadropdown-tabs
+      ul.nav.navbar-nav.navbar-left
+        li.active
+          a(href="/") Home
+        li.dropdown.mega-dropdown
+          a.dropdown-toggle(href="/products", data-toggele="dropdown") Products
+            span.caret
+          .dropdown-menu.mega-dropdown-menu
+            .container-fluid
+              .tab-content
+                -console.dir(products)
+                -each product in products
+                  .tab-pane(id="#{product.catagory.short}")
+                    ul.nav-list.list-inline
+                      -for item in product.items
+                        li
+                          a(href="/products/#{products.catagory.short}/#{item.name}")
+                            img(src="/images/products/#{item.image}")
+                            span= item.name
+            ul.nav.nav-tabs(role="tablist")
+              -var x = 0
+              -each product in products
+                -if (x == 0)
+                  li.active
+                -else 
+                  li
+                a(href="##{product.catagory.short}", role="tab", data-toggle="tab")= product.catagory.name
+      form#signin.navbar-form.navbar-right(role="form", action="/users/login")
+        .input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-user
+          input(id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address")
+        .input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-lock
+          input(id="password" type="password" class="form-control" name="password" value="" placeholder="Password")
+        button(type="submit" class="btn btn-primary") Login
+        a.btn.btn-success(href="/register") Register

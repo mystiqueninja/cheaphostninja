@@ -1,6 +1,11 @@
 extends ../layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .container(style="position: relative;margin-top: 70px")
+
+    -if (error.status == 404)
+      #error(style="margin-top: 100px;")
+        h1= error.status
+        h3 The page you were looking for has been eaten
+      img(src="https://5amazingthings.files.wordpress.com/2011/07/tbservers.png", style="z-index: -1;top: 0px;width:100%;position:absolute")
+    pre(style="opacity: 0.8;") #{error.stack}
